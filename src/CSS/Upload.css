@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #202020;
+}
+
+/* PAGE */
+
+.studio_page_layout {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #202020;
+  color: white;
+}
+
+/* MOBILE MENU BUTTON */
+
+.mobile_menu_btn_studio {
+  display: none;
+
+  position: fixed;
+  top: 14px;
+  left: 14px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #2c2c2c;
+  color: white;
+
+  z-index: 2000;
+
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+
+.sidebar_studio {
+  width: 280px;
+  min-height: 100vh;
+
+  background: #1f1f1f;
+
+  border-right: 1px solid #343434;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 24px 16px;
+}
+
+/* CHANNEL */
+
+.channel_section_studio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.channel_avatar_studio {
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: #c73700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 70px;
+}
+
+.channel_section_studio h2 {
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.channel_section_studio p {
+  margin-top: 8px;
+  color: #b3b3b3;
+}
+
+/* MENU */
+
+.menu_list_studio {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu_item_studio {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 0 18px;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.menu_item_studio:hover {
+  background: #2d2d2d;
+}
+
+.active_menu_studio {
+  background: #111111;
+}
+
+.menu_item_studio span {
+  font-size: 17px;
+}
+
+/* BOTTOM */
+
+.bottom_menu_studio {
+  margin-top: 40px;
+
+  border-top: 1px solid #343434;
+
+  padding-top: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* MAIN */
+
+.main_content_studio {
+  flex: 1;
+
+  padding: 36px 42px;
+}
+
+/* HEADER */
+
+.content_header_studio h1 {
+  font-size: 48px;
+}
+
+/* TABS */
+
+.tabs_container_studio {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  margin-top: 34px;
+
+  overflow-x: auto;
+}
+
+.tabs_container_studio::-webkit-scrollbar {
+  display: none;
+}
+
+.tab_item_studio {
+  padding-bottom: 14px;
+
+  color: #a8a8a8;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.active_tab_studio {
+  color: white;
+
+  border-bottom: 3px solid white;
+}
+
+/* FILTER */
+
+.filter_bar_studio {
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border-top: 1px solid #343434;
+  border-bottom: 1px solid #343434;
+
+  margin-top: 20px;
+
+  color: #b3b3b3;
+}
+
+/* TABLE HEADER */
+
+.table_header_studio {
+  height: 70px;
+
+  display: grid;
+  grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1fr
+    0.7fr
+    0.8fr;
+
+  align-items: center;
+
+  border-bottom: 1px solid #343434;
+
+  color: #cfcfcf;
+}
+
+.video_col_studio {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.video_col_studio input {
+  width: 20px;
+  height: 20px;
+}
+
+/* EMPTY */
+
+.empty_state_studio {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 80px;
+}
+
+.empty_state_studio img {
+  width: 260px;
+}
+
+.empty_state_studio p {
+  margin-top: 20px;
+
+  color: #b3b3b3;
+
+  font-size: 28px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .mobile_menu_btn_studio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar_studio {
+    position: fixed;
+    top: 0;
+    left: -100%;
+
+    z-index: 1500;
+
+    transition: 0.3s;
+  }
+
+  .sidebar_open_studio {
+    left: 0;
+  }
+
+  .main_content_studio {
+    width: 100%;
+
+    padding: 80px 16px 30px;
+  }
+
+  .content_header_studio h1 {
+    font-size: 30px;
+  }
+
+  .tabs_container_studio {
+    gap: 24px;
+  }
+
+  .table_header_studio {
+    min-width: 900px;
+  }
+
+  .empty_state_studio img {
+    width: 180px;
+  }
+
+  .empty_state_studio p {
+    font-size: 22px;
+    text-align: center;
+  }
+}
